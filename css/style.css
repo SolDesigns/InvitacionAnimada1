@@ -1,0 +1,187 @@
+/* =============================
+   RESET + CONFIGURACIÓN GLOBAL
+============================= */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* Variables Colores */
+  --color-primario: #45638B;
+  --color-secundario: #7090B7;
+  --color-terciario:#305481;
+  --color-texto: #252FA1;
+  --color-fondo: #fff;
+
+  /* Tipografías */
+  --font-principal: 'Lavishly Yours',cursive;
+  --font-secundaria: 'Alegreya';
+}
+
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+/* =============================
+       1 SECCIÓN HERO
+============================= */
+
+.hero{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100vh;
+  background: url('../assets/img/foto-hero.jpg') no-repeat center center/cover;
+
+}
+
+/* =============================
+    2 SECCIÓN CUENTA REGRESIVA
+============================= */
+.cuenta{
+position: relative;
+overflow: hidden;
+background-color: white;
+height: 500px;
+}
+
+.cuenta::after {
+  content: "";
+  position: absolute;
+  bottom: 0; /* pegado al fondo de la sección */
+  left: 0;
+  width: 100%;
+  height: 80px; /* ajustá la altura visible de la flor */
+  background-image: url('/assets/img/borde-flores-azules.png');
+  background-repeat: no-repeat;
+  background-size: cover; /* ocupa todo el ancho del div */
+  background-position: bottom center;
+  pointer-events: none; /* no interfiere con clics */
+}
+
+/* =============================
+    3 SECCIÓN INFO LUGAR
+============================= */
+
+.lugar{
+background-color: white;
+height: 500px;
+position: relative; /* importante para posicionar el fondo */
+overflow: hidden; 
+}
+
+.lugar::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 5 / 1; /* poné aquí la proporción de tu SVG */
+  background: url("/assets/svg/Vector-bottom-sector3.svg") no-repeat center bottom;
+  background-size: cover; /* o contain según quieras que se estire */
+  pointer-events: none; /* evita que interfiera con clics */
+}
+
+.lugar::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px; /* ajustá el alto que quieras que se vea */
+  background-image: url('/assets/img/borde-flores-azules.png');
+  background-repeat: no-repeat;
+  background-size: cover; /* que ocupe todo el ancho */
+  background-position: top center;
+  transform: scaleY(-1); /* invertir verticalmente */
+}
+
+/* =============================
+    4 SECCIÓN CARRUSEL FOTOS
+============================= */
+
+.carrusel{
+background-color: var(--color-terciario);
+height: 500px;
+}
+
+/* ==================================
+5 SECCIÓN CARDS MÚSICA-DRESS CODE-MÁS
+===================================== */
+
+.cards{
+background-color: rgb(124, 171, 228);
+height: 500px;
+}
+
+/* =============================
+        6 SECCIÓN FRASE
+============================= */
+
+.frase {
+  width: 100%; /* Que abarque todo el ancho */
+  overflow: hidden; /* Evita scrolls extra si la imagen es más grande */
+  position: relative; /* Para que los pseudo-elementos se posicionen respecto a la sección */
+  background-color: black;
+}
+
+.frase img {
+  display: block; /* Quita espacios extra de imágenes inline */
+  width: 100%; /* Escala al ancho de la pantalla */
+  height: auto; /* Mantiene proporciones originales */
+}
+
+/* SVG en el top */
+.frase::before {
+  content: "";
+  position: absolute;
+  top: -20px;
+  left: 0;
+  width: 120%;
+  height: auto;
+  aspect-ratio: 5 / 1; /* poné aquí la proporción de tu SVG */
+  background-image: url('/assets/svg/Vector-top-sector6.svg');
+  background-repeat: no-repeat;
+  background-size: cover; /* ocupa todo el ancho */
+  background-position: top center;
+  pointer-events: none;
+}
+
+/* SVG en el bottom */
+.frase::after {
+  content: "";
+  position: absolute;
+  bottom: -30px;
+  left: 0;
+  width: 110%;
+  height: 100px; /* ajustá según la altura deseada */
+  background-image: url('/assets/svg/Vector-bottom-sector6.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom center;
+  pointer-events: none;
+}
+/* =============================
+      7 SECCIÓN CARD REGALOS
+============================= */
+.regalos{
+background-color: rgb(152, 106, 222);
+height: 500px;
+}
+
+/* =============================
+       8 SECCIÓN FOOTER
+============================= */
+
+.footer{
+background-color: rgb(245, 208, 233);
+height: 500px;
+}
