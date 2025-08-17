@@ -34,12 +34,38 @@ html {
 
 .hero{
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   text-align: center;
   height: 100vh;
   background: url('../assets/img/foto-hero.jpg') no-repeat center center/cover;
+  position: relative;
+}
+.hero-contenido {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 15vh; /* Subir/bajar el bloque según quieras */
+  z-index: 2;
+}
 
+
+.hero-nombres {
+  font-family: "Lavishly Yours", cursive;
+  font-size: 2rem; /* Ajustá según tu gusto */
+  color: #fff;
+  font-weight: lighter;
+  margin: -20px;
+}
+
+.ornamento {
+  width: 250px; /* Escala general del ornamento */
+  max-width: 80%;
+  margin: -20px;
+}
+
+.ornamento.arriba {
+  transform: scaleY(-1); /* Voltear verticalmente */
 }
 
 /* =============================
