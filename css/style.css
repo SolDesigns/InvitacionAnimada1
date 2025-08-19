@@ -55,14 +55,14 @@ html, body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 15vh; /* Subir/bajar el bloque según quieras */
+  margin-top: 10vh; /* Subir/bajar el bloque según quieras */
   z-index: 2;
 }
 
 
 .hero-nombres {
   font-family: "Lavishly Yours", cursive;
-  font-size: 2rem; /* Ajustá según tu gusto */
+  font-size: 3rem; 
   color: #fff;
   font-weight: lighter;
   margin: -20px;
@@ -70,7 +70,7 @@ html, body {
 }
 
 .ornamento {
-  width: 250px; /* Escala general del ornamento */
+  width: 300px; /* Escala general del ornamento */
   max-width: 80%;
   margin: -20px;
 }
@@ -84,10 +84,83 @@ html, body {
 ============================= */
 .cuenta{
 position: relative;
-overflow: hidden;
+overflow: visible;
 background-color: white;
-height: 500px;
+height: 600px;
+width: 100%;
 }
+
+
+/* El círculo arriba 
+.circulo {
+  width: 90%;
+  height: 60%;
+  background: white;
+  border-radius: 50%;
+  margin: 0 auto;       
+  transform: translateY(-30%); 
+  display: flex;        
+  justify-content: center;
+  align-items: flex-start;
+}*/
+
+.circulo {
+  width: 100%;
+  height: 60%;
+  padding-bottom: 60%; /* mantiene proporción circular */
+  background: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  position: relative;
+  z-index: 1; /* círculo debajo */
+  transform: translateY(-10%); 
+}
+
+
+.circulo-wrapper {
+  position: relative;
+  width: 90%;
+  margin: 0 auto;
+  transform: translateY(-30%);
+}
+
+.marco-floral {
+  position: absolute;
+  top: -110px;
+  left: -30px;
+  width: 120%; /* un poquito más grande que el círculo */
+  height: auto;
+  transform: rotate(50deg); /* giro hacia la derecha */
+  z-index: 2; /* encima del círculo */
+  pointer-events: none; /* no interfiere con clics */
+}
+
+/* Texto debajo */
+.texto-cuenta {
+  margin-top: -90px; /* ajustá según el círculo */
+  text-align: center;
+}
+
+.titulo-cuenta{
+  font-family: var(--font-principal);
+  color: var(--color-terciario);
+  font-size: 3em;
+  margin-top: 30px;
+}
+
+.frase-cuenta{
+  font-family: var(--font-principal);
+  font-size: 3em;
+}
+
+.frase-cuenta-cuerpo{
+  font-family: var(--font-principal);
+  font-weight: lighter;
+  font-size: 2em;
+}
+
 
 .cuenta::after {
   content: "";
