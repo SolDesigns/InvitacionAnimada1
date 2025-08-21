@@ -1,5 +1,23 @@
 {
   "evento": {
     "fecha": "2025-12-20T18:00:00"
+  },
+   "ceremonia": {
+    "titulo": "Ceremonia",
+    "fecha": "2025-10-18T17:00:00",
+    "lugar": "Parroquia Nuestra Sra. Fátima",
+    "direccion": "Av. Los Álamos 1432 - CABA",
+    "imagen": "assets/img/ceremonia.png",
+    "calendarUrl": "https://calendar.google.com/ceremonia",
+    "mapsUrl": "https://maps.google.com/ceremonia"
+  },
+  "fiesta": {
+    "titulo": "Celebración",
+    "fecha": "2025-10-18T21:00:00",
+    "lugar": "Salón de Fiestas Matinal",
+    "direccion": "Av. Lozana 4251 - CABA",
+    "imagen": "assets/img/fiesta.png",
+    "calendarUrl": "https://calendar.google.com/fiesta",
+    "mapsUrl": "https://maps.google.com/fiesta"
   }
 }

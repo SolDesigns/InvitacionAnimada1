@@ -14,18 +14,14 @@
     <script defer src="js/main.js"></script>
   </head>
   <body>
+
     <div class="seccion hero">
       <div class="hero-contenido">
-        <!-- Ornamento superior -->
-        <img src="assets/img/ornamento-hero.png" alt="ornamento" class="ornamento arriba" />
-
-        <!-- Texto central -->
-        <h1 class="hero-nombres">Lucía <br>&<br>Fabián</h1>
-
-        <!-- Ornamento inferior -->
-        <img src="assets/img/ornamento-hero.png" alt="ornamento" class="ornamento abajo" />
-     </div> 
-   </div>
+        <img src="assets/img/ornamento-hero.png" alt="ornamento" class="ornamento arriba"/>
+        <h1 class="hero-nombres">Lucía <br />&<br />Fabián</h1>
+        <img src="assets/img/ornamento-hero.png" alt="ornamento" class="ornamento abajo"/>
+      </div>
+    </div>
 
     <div class="seccion cuenta">
       <div class="circulo-wrapper">
@@ -36,59 +32,122 @@
             <div><span id="horas">00</span><small>hs</small></div>
             <div><span id="minutos">00</span><small>min</small></div>
             <div><span id="segundos">00</span><small>seg</small></div>
+          </div>
         </div>
-        </div>
-        <img src="/assets/img/marco-floral-sector2.png" alt="marco floral" class="marco-floral">
+        <img src="/assets/img/marco-floral-sector2.png" alt="marco floral" class="marco-floral"/>
       </div>
       <div class="texto-cuenta">
-        <p class="frase-cuenta">¡Nos casamos!</p> 
-        <p class="frase-cuenta-cuerpo"> Deseamos que seas parte<br>de este día tan<br>especial</p> 
+        <p class="frase-cuenta">¡Nos casamos!</p>
+        <p class="frase-cuenta-cuerpo">Deseamos que seas parte<br />de este día tan<br />especial</p>
       </div>
     </div>
 
-    <div class="seccion lugar"></div>
+    <div class="seccion lugar">
+      <div class="card card1" id="cardCeremonia">
+        <img class="gif" src="/assets/img/ceremonia.gif" alt="Imagen ceremonia"/>
+        <h2>Ceremonia</h2>
+        <h3>Día</h3>
+        <p id="fechaCeremonia"></p>
+        <a id="calendarCeremonia" class="boton" target="_blank">Agendar</a>
+        <h3>Lugar</h3>
+        <p id="lugarCeremonia"></p>
+        <a class="boton" id="rsvp1" target="_blank">Confirmar asistencia</a>
+        <h3>Dirección</h3>
+        <p id="direccionCeremonia"></p>
+        <a id="mapsCeremonia" class="boton" target="_blank">¿Cómo llegar?</a>
+      </div>
 
-    <div class="seccion carrusel">
-        <h1 id="tituloGaleria">Retratos de nuestra<br>historia de amor</h1>
-        <div class="carrusel-track">
-          <img src="/assets/img/foto1.jpg" alt="Foto 1" />
-          <img src="/assets/img/foto2.jpg" alt="Foto 2" />
-          <img src="/assets/img/foto3.jpg" alt="Foto 3" />
-        </div>
-        <div class="carrusel-dots">
-          <span class="dot active"></span>
-          <span class="dot"></span>
-          <span class="dot"></span>
-        </div> 
+      <div class="card" id="cardFiesta">
+        <img class="gif" src="/assets/img/celebracion.gif" alt="Imagen fiesta" />
+        <h2>Celebración</h2>
+        <h3>Día</h3>
+        <p id="fechaFiesta"></p>
+        <a id="calendarFiesta" class="boton" target="_blank">Agendar</a>
+        <h3>Lugar</h3>
+        <p id="lugarFiesta"></p>
+        <a class="boton" id="rsvp2" target="_blank">Confirmar asistencia</a>
+        <h3>Dirección</h3>
+        <p id="direccionFiesta"></p>
+        <a id="mapsFiesta" class="boton" target="_blank">¿Cómo llegar?</a>
+      </div>
     </div>
 
+    <div class="seccion carrusel">
+      <h1 id="tituloGaleria">Retratos de nuestra<br />historia de amor</h1>
+      <div class="carrusel-track">
+        <img src="/assets/img/foto1.jpg" alt="Foto 1" />
+        <img src="/assets/img/foto2.jpg" alt="Foto 2" />
+        <img src="/assets/img/foto3.jpg" alt="Foto 3" />
+      </div>
+      <div class="carrusel-dots">
+        <span class="dot active"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+      </div>
+    </div>
 
-    <div class="seccion cards"></div>
+    <div class="seccion cards">
+      <div class="contenedor">
+        <div class="card cardRegalos cardBarroco" >
+        <div class="contenido">
+          <img src="/assets/img/music.gif" alt="" class="gif"/>
+          <h2>Música</h2>
+          <p>¿Cuál es la canción que no puede faltar en la playlist de la fiesta?</p>
+        </div>
+        <div class="boton">Sugerir canción</div>
+      </div>
+      <div class="card cardRegalos cardBarroco" >
+        <div class="contenido">
+          <img src="/assets/img/suit.gif" alt="" class="gif"/>
+          <h2>Dress Code</h2>
+          <p>Una orientación para tu vestuario</p>
+        </div>
+        <div class="boton">Ver sugerencias</div>
+      </div>
+      <div class="card cardRegalos cardBarroco" >
+        <div class="contenido">
+          <img src="/assets/img/notes.gif" alt="" class="gif"/>
+          <h2>Tips y Notas</h2>
+          <p>Información adicional para tener en cuenta</p>
+        </div>
+        <div class="boton">Más info</div>
+      </div>
+      </div>
+    </div>
 
     <div class="seccion frase">
       <!-- Background -->
-      <img src="assets/img/foto-frase.png" class="bg-frase"/>
+      <img src="assets/img/foto-frase.png" class="bg-frase" />
       <!-- Flores en las esquinas -->
-      <img src="assets/img/lineal-flor-top-sector6.png" alt="" class="flor-top"/>
+      <img
+        src="assets/img/lineal-flor-top-sector6.png" alt="" class="flor-top"/>
       <img src="assets/img/lineal-flor-bottom-sector6.png" alt="" class="flor-bottom"/>
       <!-- Texto central -->
-      <p class="frase-texto">
-        Y&ensp;no vale la pena irse de este mundo sin haberle dado tantito gusto a la
-        vida.
-      </p>
+      <p class="frase-texto">Y&ensp;no vale la pena irse de este mundo sin haberle 
+        dado tantito gusto a la vida.</p>
     </div>
 
-    <div class="seccion regalos"></div>
+    <div class="seccion regalos">
+      <div class="card cardRegalos" >
+        <div class="contenido">
+          <img src="/assets/img/regalo.gif" alt="" class="gif"/>
+          <h2>Regalos</h2>
+          <p>Si deseas regalarnos algo más que tu valiosa presencia</p>
+        </div>
+        <div class="boton">Ver más</div>
+      </div>
+    </div>
 
     <div class="seccion footer">
       <!-- Texto central -->
-      <h1 class="footer-nombres">Lucía <br>&<br>Fabián</h1>
+      <h1 class="footer-nombres">Lucía <br />&<br />Fabián</h1>
       <div class="footer-links">
-       <a href="#">Confirmar asistencia</a>
-       <a href="#">Sugerir canción</a>
-       <a href="#">Agendar celebración</a>
+        <a href="#">Confirmar asistencia</a>
+        <a href="#">Sugerir canción</a>
+        <a href="#">Agendar celebración</a>
       </div>
-      <img src="/assets/img/footer-ave.png" alt="ave decorativa" class="footer-ave">
+      <img
+        src="/assets/img/footer-ave.png" alt="ave decorativa" class="footer-ave"/>
     </div>
   </body>
 </html>

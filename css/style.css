@@ -205,9 +205,13 @@ width: 100%;
 
 .lugar{
 background-color: white;
-height: 500px;
+height: auto;
 position: relative; /* importante para posicionar el fondo */
 overflow: hidden; 
+display: flex;
+flex-direction: column;
+gap: 2rem;
+padding: 2rem 1rem;
 }
 
 .lugar::before {
@@ -223,6 +227,73 @@ overflow: hidden;
   background-position: top center;
   transform: scaleY(-1); /* invertir verticalmente */
 }
+
+.card {
+  background: white;
+  padding:  1.5rem 1.5rem 3rem;
+  border-radius: 1rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  text-align: center;
+  max-width: 350px;
+  margin: 0 auto;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card1{
+margin-top: 20%;
+}
+
+.card h2{
+font-family: var(--font-principal);
+color: var(--color-texto);
+font-size: 2.5em;
+font-weight: lighter;
+}
+
+.card h3 {
+  font-size: 1.2rem;
+  margin-top: 1rem;
+  color: #2d2c2c;
+  font-family: var(--font-secundaria);
+}
+
+.card p {
+  font-size: 1rem;
+  margin: 0.25rem 0;
+  font-family: var(--font-secundaria);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.boton {
+  display: inline-block;
+  margin: 0.5rem auto;
+  padding: 0.6rem 1.2rem;
+  background: var(--color-secundario);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 1.5rem;
+  transition: background 0.3s;
+  font-family: var(--font-secundaria);
+  width: 229px;
+}
+
+.boton:hover {
+  background: rgb(9, 9, 66);
+}
+
+.gif{
+  width: 80px;
+  height: auto;
+  margin: 0 auto;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+
 
 /* =============================
     4 SECCIÓN CARRUSEL FOTOS
@@ -303,9 +374,22 @@ overflow: hidden;
 ===================================== */
 
 .cards{
-background-color: rgb(124, 171, 228);
-height: 500px;
+height: auto;
 }
+
+.contenedor{
+  display:flex;
+  flex-wrap: wrap;
+}
+
+.cardRegalos.cardBarroco {
+  background-image: url(/assets/img/pattern.jfif);
+}
+
+.cardRegalos.cardBarroco .boton {
+  background-color: var(--color-secundario);
+}
+
 
 /* =============================
         6 SECCIÓN FRASE
@@ -389,9 +473,57 @@ height: 500px;
 /* =============================
       7 SECCIÓN CARD REGALOS
 ============================= */
-.regalos{
-background-color: rgb(152, 106, 222);
-height: 500px;
+.regalos {
+  background-color: white;
+  padding: 2rem 1rem; /* respiración en mobile */
+}
+
+.cardRegalos {
+  background-color: var(--color-secundario);
+  width: 100%;
+  max-width: 320px; /* un poquito más flexible */
+  border-radius: 1rem;
+  overflow: hidden; /* para que hijos no sobresalgan */
+  margin: 2rem auto;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  gap: 1rem;
+}
+
+.cardRegalos .contenido {
+  background-color: white;
+  padding: 1.2rem;
+  flex: 1; /* ocupa todo el espacio disponible arriba del botón */
+  text-align: center;
+  border-radius: 1rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.6);
+}
+
+.cardRegalos img.gif {
+  max-width: 100px;
+  margin-bottom: 0.8rem;
+}
+
+.cardRegalos h2 {
+  margin: 0.5rem 0;
+}
+
+.cardRegalos .boton {
+  background-color: #305481;
+  color: white;
+  text-align: center;
+  padding: 0.8rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  width: 100%; /* ocupa todo el ancho de la card */
+  font-weight: lighter;
+}
+
+.cardRegalos .boton:hover {
+  background-color: #1f3656;
 }
 
 /* =============================
@@ -400,11 +532,11 @@ height: 500px;
 
 .footer{
 background-color: white;
-height: 100vh;
+height: 80vh;
 display: flex;
 align-items: center;
 justify-content: start;
-margin-top: 20vh;
+margin-top: 4rem;
 text-align: center;
 position: relative;
 flex-direction: column;

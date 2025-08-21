@@ -1,3 +1,34 @@
+document.addEventListener("DOMContentLoaded", () => {
+  fetch("data/config.json")
+    .then((res) => res.json())
+    .then((data) => {// Ceremonia
+      document.getElementById("imgCeremonia").src = data.ceremonia.imagen;
+      document.getElementById("tituloCeremonia").textContent = data.ceremonia.titulo;
+      document.getElementById("fechaCeremonia").textContent = formatFecha(data.ceremonia.fecha);
+      document.getElementById("lugarCeremonia").textContent = data.ceremonia.lugar;
+      document.getElementById("direccionCeremonia").textContent = data.ceremonia.direccion;
+      document.getElementById("calendarCeremonia").href = data.ceremonia.calendarUrl;
+      document.getElementById("mapsCeremonia").href = data.ceremonia.mapsUrl;
+      document.getElementById("rsvp1").href = data.rsvpUrl;
+
+      // Fiesta
+      document.getElementById("imgFiesta").src = data.fiesta.imagen;
+      document.getElementById("tituloFiesta").textContent = data.fiesta.titulo;
+      document.getElementById("fechaFiesta").textContent = formatFecha(data.fiesta.fecha);
+      document.getElementById("lugarFiesta").textContent = data.fiesta.lugar;
+      document.getElementById("direccionFiesta").textContent = data.fiesta.direccion;
+      document.getElementById("calendarFiesta").href = data.fiesta.calendarUrl;
+      document.getElementById("mapsFiesta").href = data.fiesta.mapsUrl;
+      document.getElementById("rsvp2").href = data.rsvpUrl;
+
+      cargarGaleria(data.galeria);
+      iniciarCuentaRegresiva(data.fechaEvento);
+    });
+});
+
+
+
+
 //////////////////////////////////////
 // Detectar scroll y marcar dot///////
 //////////////////////////////////////
