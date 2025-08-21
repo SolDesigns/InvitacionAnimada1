@@ -317,6 +317,7 @@ font-weight: lighter;
   font-weight: lighter;
   font-family: var(--font-principal);
   line-height: 1.2;
+  max-width: 50%;
 }
 
 .carrusel-track {
@@ -585,6 +586,10 @@ gap: 5rem; /* espacio entre nombres y links */
   pointer-events: none; /* no interfiere con clics */
 }
 
+.footer-left {
+  display: none;
+}
+
 .footer-ave {
   position: absolute;
   right: 0;
@@ -671,4 +676,141 @@ gap: 5rem; /* espacio entre nombres y links */
     margin-left: 1rem;
   }
 
+  /*SECCIÓN 4 CARRUSEL */
+.carrusel-track {
+    overflow-x: visible; /* deja ver todas */
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    padding: 0;
+  }
+
+  .carrusel-track img {
+    width: 300px;
+    flex: none;
+  }
+
+ #tituloGaleria {
+    font-size: 3rem;
+    margin: 8rem 0 2rem;
+  }
+
+    .carrusel-dots {
+    margin: 2rem 0 3rem;
+    gap: 0.75rem;
+  }
+
+  .carrusel {
+  width: 100%;
+  background-color: var(--color-terciario);
+  clip-path: path("M0,50 Q50,30 260,13 T661,19 T1227,11 T1998,42 V1490 H2 Z");
+  height: 90vh;
 }
+
+/*SECCIÓN 5 CARDS */
+
+.cards{
+  height: 100vh;
+  display:flex;
+  justify-content: center;
+}
+
+.contenedor{
+  height: 100%;
+  width:80%;
+  justify-content: center;
+  align-items: center;
+}
+
+.cardRegalos.cardBarroco{
+  max-height: 50%;
+}
+
+.card3{
+  margin-right: 0;
+}
+
+.card4{
+  margin-left: 0;
+}
+
+/*SECCIÓN 6 CARDS */
+
+.frase {
+  height: 100vh;
+}
+
+/* Fondo */
+.bg-frase {
+  width: 100%;
+  height: auto;
+  display: block;
+  z-index: 0;
+  position: relative;
+}
+
+.frase::before {
+  top: -13rem;
+  height: 50%; /* ajusta según lo alto del SVG */
+}
+
+/* SVG inferior */
+.frase::after {
+  bottom: -15rem;
+  height: 50%;
+}
+
+/* Flores */
+.flor-top {
+  top:-5%;
+  left: -8%;
+  width: 40%;
+}
+
+.flor-bottom {
+  right: -8%;
+  width: 30%;
+  bottom:-5%;
+}
+
+/* Texto central */
+.frase-texto {
+  font-size: 4rem;
+}
+/*SECCION REGALOS*/
+
+
+/*SECCION FOOTER*/
+
+.footer::after {
+  content: "";
+  position: absolute;
+  bottom: 0; /* pegado al fondo de la sección */
+  left: 0;
+  width: 100%;
+  height: 250px;
+  background-image: url('/assets/img/footer-img.png');
+  background-repeat: repeat;
+  background-size: contain; 
+  background-position: bottom center;
+  pointer-events: none; /* no interfiere con clics */
+}
+
+ .footer-left {
+    display: block;
+    position: absolute;  /* para colocarla a la izquierda */
+    left: 0;
+    top:45%;          
+    transform: translateY(-50%);
+    width: 15%;       /* ajusta el tamaño según necesidad */
+    height: auto;
+    z-index: 1;
+  }
+
+  .footer {
+    position: relative; /* necesario para que la posición absoluta funcione */
+  }
+
+}
+
+
